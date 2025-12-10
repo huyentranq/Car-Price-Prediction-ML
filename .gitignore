@@ -1,0 +1,71 @@
+# =============================
+# Python
+# =============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+*.joblib
+
+# Virtual environment
+venv/
+.env/
+.venv/
+test.py/
+tesst.py/
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# =============================
+# OS / Editors
+# =============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =============================
+# Logs
+# =============================
+
+
+# =============================
+# Data
+# =============================
+data/
+# Data_processed/
+# data_processed/
+# *.csv
+
+
+# =============================
+# Models
+# =============================
+
+
+# Nhưng vẫn có thể giữ folder models để không bị mất cấu trúc
+
+# Nhưng ignore tất cả file trong đó
+
+
+# =============================
+# Visualization outputs
+# =============================
+
+
+# =============================
+# Build artifacts
+# =============================
+dist/
+build/
+
+# =============================
+# Temporary files
+# =============================
+*.tmp
+
+*.out
+*.bak
+
