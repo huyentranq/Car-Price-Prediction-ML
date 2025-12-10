@@ -141,7 +141,7 @@ bash run_scripts/run_model_XGBRegressor.sh
 
 ```
 
-### **Script CLI tùy chỉnh**
+### Script CLI tùy chỉnh
 ``run_scripts/`` cung cấp **các script CLI tùy chỉnh** để bạn linh hoạt chạy thử nhiều mô hình.
 
 Ví dụ dưới đây là **kịch bản chạy XGBRegressor không tuning**
@@ -168,7 +168,20 @@ python main_script.py \
 
 ```
 
-### **Output của training**
+
+### Feature Importance:
+---
+Mạc định train XGBRegressor, kiểm tra kết quả tại: **outputs/visualize_images/**
+
+```bash 
+python main_script.py \
+    --model_name "XGBRegressor" \
+    --tuner 0 \
+    --run_id "005" \
+    --savedir_models "outputs/models"
+```
+
+### **Output của training** :(tham khảo) [output_experiment](https://github.com/huyentranq/Car-Price-Prediction-ML/tree/master/output_experiment)
 ```bash
 ├── outputs/
 │   ├── logs/                   # Log quá trình huấn luyện/xử lý.
@@ -180,7 +193,6 @@ python main_script.py \
 
 
 
----
 
 
 ---
