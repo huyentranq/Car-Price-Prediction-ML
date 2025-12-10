@@ -7,6 +7,7 @@ import os
 import pickle
 from datetime import datetime
 from sklearn.base import BaseEstimator
+from xgboost import XGBRegressor 
 from typing import Dict, Any, Union, Tuple
 import seaborn as sns
 from src.utils.metrics import RegressionMetrics 
@@ -147,6 +148,69 @@ class ModelEvaluator:
             plt.close()
 
             return save_path
+
+# === PHƯƠNG THỨC : VISUALIZE FEATURE IMPORTANCE ===
+    def visualize_feature_importance(self, model: BaseEstimator, model_name: str, is_tuned: bool, top_n: int = 15) -> str:
+        """
+        Trích xuất và vẽ biểu đồ Feature Importance ('gain') cho mô hình XGBoost.
+        """
+        
+        # 1. Kiểm tra mô hình
+        if not isinstance(model, XGBRegressor):
+            logger.warning(f"Mô hình '{model_name}' không phải là XGBRegressor. Không thể tính Feature Importance theo 'gain'.")
+            return ""
+
+        logger.info("Bắt đầu tính Feature Importance bằng XGBoost (Type: 'gain')...")
+
+        # 2. Trích xuất Feature Importance
+        booster = model.get_booster()
+        
+        # Lấy Importance theo 'gain' (Độ giảm mất mát trung bình mà feature đóng góp)
+        f_importance = booster.get_score(importance_type='gain')
+        
+        if not f_importance:
+             logger.warning("Không có Feature Importance nào được tính toán. (Có thể do mô hình base không được huấn luyện).")
+             return ""
+        
+        # 3. Chuẩn bị dữ liệu và sắp xếp
+        df_importance = pd.DataFrame(
+            list(f_importance.items()), 
+            columns=['Feature', 'Importance']
+        ).sort_values(by='Importance', ascending=False)
+
+        # Lấy Top N
+        df_top_n = df_importance.head(top_n)
+
+        # 4. Vẽ biểu đồ
+        plt.figure(figsize=(10, 8))
+        sns.barplot(
+            x='Importance', 
+            y='Feature', 
+            data=df_top_n, 
+            palette='viridis'
+        )
+
+        title = f"{model_name} – Top {top_n} Feature Importance (Gain) (Tuning: {'Yes' if is_tuned else 'No'})"
+        plt.title(title)
+        plt.xlabel("Feature Importance ('gain')")
+        plt.ylabel("Features")
+        plt.tight_layout()
+
+        # 5. Lưu file
+        save_dir = "outputs/visualize_images"
+        os.makedirs(save_dir, exist_ok=True)
+        tune_tag = 1 if is_tuned else 0
+        
+        save_path = os.path.join(
+            save_dir,
+            f"{model_name}_feature_importance_{tune_tag}.png"
+        )
+
+        plt.savefig(save_path, dpi=300)
+        plt.close()
+
+        logger.info(f"Đã lưu biểu đồ Feature Importance tại: {save_path}")
+        return save_path
 # ============================================================================
 # CLASS 2: ModelPersister
 

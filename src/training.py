@@ -91,19 +91,30 @@ class TrainingPipeline:
         evaluator = ModelEvaluator(self.X_test, self.y_test)
         self.metrics = evaluator.evaluate(self.best_model)
         
-        # ---  Trực quan hóa (Visualize) ---
+        # Visualizations
         visualize_path = evaluator.visualize_predictions(
             model_name=model_name,
             is_tuned=self.is_tuned
         )
         logger.info(f"→ Saved visualization: {visualize_path}")
         
+        # Residuals Plot
         visualize_residuals_path = evaluator.visualize_residuals(
             model_name=model_name,
             is_tuned=self.is_tuned
         )
         logger.info(f"→ Saved residuals plot: {visualize_residuals_path}")
-        # --- Lưu trữ (Persist) ---
+
+        # Feature Importance (nếu chạy XGBRegressor)
+        visualize_path_fi = evaluator.visualize_feature_importance(
+            model=self.best_model,
+            model_name=model_name,
+            is_tuned=self.is_tuned,
+            top_n=15 # Chỉ hiển thị Top 10 feature (có thể tùy chỉnh)
+        )
+        if visualize_path_fi:
+            logger.info(f"→ Saved Feature Importance: {visualize_path_fi}")
+        # Lưu trữ (Persist) 
         persister = ModelPersister(
             run_id=self.run_config['run_id'],
             model_name=model_name,
