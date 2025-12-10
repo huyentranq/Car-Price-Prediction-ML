@@ -1,0 +1,48 @@
+2025-12-10 14:01:30 | INFO | root | BẮT ĐẦU PIPELINE | RUN ID: 003
+2025-12-10 14:01:30 | INFO | root | 
+========== THÔNG SỐ CHẠY PIPELINE ==========
+2025-12-10 14:01:30 | INFO | root | X_train_path: Data_processed/X_train.csv
+2025-12-10 14:01:30 | INFO | root | X_test_path: Data_processed/X_test.csv
+2025-12-10 14:01:30 | INFO | root | y_train_path: Data_processed/y_train.csv
+2025-12-10 14:01:30 | INFO | root | y_test_path: Data_processed/y_test.csv
+2025-12-10 14:01:30 | INFO | root | data_input_path: None
+2025-12-10 14:01:30 | INFO | root | data_output_path: data
+2025-12-10 14:01:30 | INFO | root | data_process: 0
+2025-12-10 14:01:30 | INFO | root | tuner: 0
+2025-12-10 14:01:30 | INFO | root | model_name: LGBMRegressor
+2025-12-10 14:01:30 | INFO | root | hyperparam_config_path: config/hyperparams.json
+2025-12-10 14:01:30 | INFO | root | gpu: 1
+2025-12-10 14:01:30 | INFO | root | run_id: 003
+2025-12-10 14:01:30 | INFO | root | savedir_models: outputs/models
+2025-12-10 14:01:30 | INFO | root | seed: 42
+2025-12-10 14:01:30 | INFO | root | ============================================
+
+2025-12-10 14:01:30 | INFO | root | 
+========== [2] NẠP DỮ LIỆU TRAIN/TEST ==========
+2025-12-10 14:01:30 | INFO | TrainingPipeline | Đang nạp dữ liệu đã xử lý...
+2025-12-10 14:01:31 | INFO | TrainingPipeline | Nạp dữ liệu hoàn tất.
+2025-12-10 14:01:31 | INFO | root |  Train size: 299,003
+2025-12-10 14:01:31 | INFO | root |  Test size : 74,751
+2025-12-10 14:01:31 | INFO | root | ========== HOÀN TẤT NẠP DỮ LIỆU ==========
+
+2025-12-10 14:01:31 | INFO | root | ========== [3] BẮT ĐẦU TRAINING PIPELINE ==========
+2025-12-10 14:01:31 | INFO | TrainingPipeline | Chế độ: BASE TRAINING (Không tuning).
+2025-12-10 14:01:31 | INFO | HyperparamTuner | Đã khởi tạo Base Model: LGBMRegressor
+2025-12-10 14:01:31 | INFO | HyperparamTuner | LGBMRegressor - Training BASE model (No Tuning).
+2025-12-10 14:01:34 | INFO | ResultsManager | Bắt đầu đánh giá mô hình trên tập Test...
+2025-12-10 14:01:34 | INFO | ResultsManager | --- KẾT QUẢ ĐÁNH GIÁ ---
+2025-12-10 14:01:34 | INFO | ResultsManager | MAE: 3384.2115
+2025-12-10 14:01:34 | INFO | ResultsManager | MSE: 32119118.3924
+2025-12-10 14:01:34 | INFO | ResultsManager | RMSE: 5667.3731
+2025-12-10 14:01:34 | INFO | ResultsManager | R2: 0.8430
+2025-12-10 14:01:34 | INFO | ResultsManager | --------------------------
+2025-12-10 14:01:35 | INFO | TrainingPipeline | → Saved visualization: outputs/visualize_images/LGBMRegressor_linechart_200_samples_0_tuning.png
+2025-12-10 14:01:36 | INFO | TrainingPipeline | → Saved residuals plot: outputs/visualize_images/LGBMRegressor_residuals_0.png
+2025-12-10 14:01:36 | INFO | ResultsManager | Đã lưu mô hình .pkl tại: outputs/models/003_LGBMRegressor_0_tuner.pkl
+2025-12-10 14:01:36 | INFO | TrainingPipeline | → Saved model to      : outputs/models/003_LGBMRegressor_0_tuner.pkl
+2025-12-10 14:01:36 | INFO | ResultsManager | Đã lưu kết quả thí nghiệm vào outputs/metrics/experiment_log.csv
+2025-12-10 14:01:36 | INFO | TrainingPipeline | 
+===== PIPELINE COMPLETED SUCCESSFULLY =====
+
+2025-12-10 14:01:36 | INFO | root | ========== HOÀN TẤT TRAINING PIPELINE ==========
+

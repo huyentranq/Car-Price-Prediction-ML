@@ -1,0 +1,8 @@
+2025-12-10 19:06:53 | INFO | root | 
+========== [1] BẮT ĐẦU TIỀN XỬ LÝ DỮ LIỆU ==========
+2025-12-10 19:06:53 | INFO | root | • Input path:  data/vehicles.csv
+2025-12-10 19:06:53 | INFO | root | • Output path: Data_processed
+2025-12-10 19:07:10 | INFO | root | → Chạy pipeline xử lý dữ liệu...
+2025-12-10 19:07:24 | INFO | root | → Đã lưu dữ liệu đã xử lý.
+2025-12-10 19:07:24 | INFO | root | ========== HOÀN TẤT TIỀN XỬ LÝ ==========
+

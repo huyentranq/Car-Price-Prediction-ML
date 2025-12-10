@@ -1,0 +1,79 @@
+2025-12-10 13:11:05 | INFO | root | BẮT ĐẦU PIPELINE | RUN ID: 006
+2025-12-10 13:11:05 | INFO | root | 
+========== THÔNG SỐ CHẠY PIPELINE ==========
+2025-12-10 13:11:05 | INFO | root | X_train_path: Data_processed/X_train.csv
+2025-12-10 13:11:05 | INFO | root | X_test_path: Data_processed/X_test.csv
+2025-12-10 13:11:05 | INFO | root | y_train_path: Data_processed/y_train.csv
+2025-12-10 13:11:05 | INFO | root | y_test_path: Data_processed/y_test.csv
+2025-12-10 13:11:05 | INFO | root | data_input_path: None
+2025-12-10 13:11:05 | INFO | root | data_output_path: data
+2025-12-10 13:11:05 | INFO | root | data_process: 0
+2025-12-10 13:11:05 | INFO | root | tuner: 1
+2025-12-10 13:11:05 | INFO | root | model_name: XGBRegressor
+2025-12-10 13:11:05 | INFO | root | hyperparam_config_path: config/hyperparams.json
+2025-12-10 13:11:05 | INFO | root | gpu: 0
+2025-12-10 13:11:05 | INFO | root | run_id: 006
+2025-12-10 13:11:05 | INFO | root | savedir_models: outputs/models
+2025-12-10 13:11:05 | INFO | root | seed: 42
+2025-12-10 13:11:05 | INFO | root | ============================================
+
+2025-12-10 13:11:05 | INFO | root | 
+========== [2] NẠP DỮ LIỆU TRAIN/TEST ==========
+2025-12-10 13:11:05 | INFO | TrainingPipeline | Đang nạp dữ liệu đã xử lý...
+2025-12-10 13:11:06 | INFO | TrainingPipeline | Nạp dữ liệu hoàn tất.
+2025-12-10 13:11:06 | INFO | root |  Train size: 299,003
+2025-12-10 13:11:06 | INFO | root |  Test size : 74,751
+2025-12-10 13:11:06 | INFO | root | ========== HOÀN TẤT NẠP DỮ LIỆU ==========
+
+2025-12-10 13:11:06 | INFO | root | ========== [3] BẮT ĐẦU TRAINING PIPELINE ==========
+2025-12-10 13:11:06 | INFO | TrainingPipeline | Chế độ: HYPERPARAMETER TUNING đang bật.
+2025-12-10 13:11:06 | INFO | HyperparamTuner | Đã khởi tạo Base Model: XGBRegressor
+2025-12-10 13:11:06 | INFO | HyperparamTuner | XGBRegressor - Running GridSearchCV...
+2025-12-10 13:20:09 | INFO | root | BẮT ĐẦU PIPELINE | RUN ID: 006
+2025-12-10 13:20:09 | INFO | root | 
+========== THÔNG SỐ CHẠY PIPELINE ==========
+2025-12-10 13:20:09 | INFO | root | X_train_path: Data_processed/X_train.csv
+2025-12-10 13:20:09 | INFO | root | X_test_path: Data_processed/X_test.csv
+2025-12-10 13:20:09 | INFO | root | y_train_path: Data_processed/y_train.csv
+2025-12-10 13:20:09 | INFO | root | y_test_path: Data_processed/y_test.csv
+2025-12-10 13:20:09 | INFO | root | data_input_path: None
+2025-12-10 13:20:09 | INFO | root | data_output_path: data
+2025-12-10 13:20:09 | INFO | root | data_process: 0
+2025-12-10 13:20:09 | INFO | root | tuner: 1
+2025-12-10 13:20:09 | INFO | root | model_name: XGBRegressor
+2025-12-10 13:20:09 | INFO | root | hyperparam_config_path: config/hyperparams.json
+2025-12-10 13:20:09 | INFO | root | gpu: 0
+2025-12-10 13:20:09 | INFO | root | run_id: 006
+2025-12-10 13:20:09 | INFO | root | savedir_models: outputs/models
+2025-12-10 13:20:09 | INFO | root | seed: 42
+2025-12-10 13:20:09 | INFO | root | ============================================
+
+2025-12-10 13:20:09 | INFO | root | 
+========== [2] NẠP DỮ LIỆU TRAIN/TEST ==========
+2025-12-10 13:20:09 | INFO | TrainingPipeline | Đang nạp dữ liệu đã xử lý...
+2025-12-10 13:20:11 | INFO | TrainingPipeline | Nạp dữ liệu hoàn tất.
+2025-12-10 13:20:11 | INFO | root |  Train size: 299,003
+2025-12-10 13:20:11 | INFO | root |  Test size : 74,751
+2025-12-10 13:20:11 | INFO | root | ========== HOÀN TẤT NẠP DỮ LIỆU ==========
+
+2025-12-10 13:20:11 | INFO | root | ========== [3] BẮT ĐẦU TRAINING PIPELINE ==========
+2025-12-10 13:20:11 | INFO | TrainingPipeline | Chế độ: HYPERPARAMETER TUNING đang bật.
+2025-12-10 13:20:11 | INFO | HyperparamTuner | Đã khởi tạo Base Model: XGBRegressor
+2025-12-10 13:20:11 | INFO | HyperparamTuner | XGBRegressor - Running GridSearchCV...
+2025-12-10 13:50:56 | INFO | ResultsManager | Bắt đầu đánh giá mô hình trên tập Test...
+2025-12-10 13:50:57 | INFO | ResultsManager | --- KẾT QUẢ ĐÁNH GIÁ ---
+2025-12-10 13:50:57 | INFO | ResultsManager | MAE: 2609.7947
+2025-12-10 13:50:57 | INFO | ResultsManager | MSE: 21328510.0000
+2025-12-10 13:50:57 | INFO | ResultsManager | RMSE: 4618.2800
+2025-12-10 13:50:57 | INFO | ResultsManager | R2: 0.8957
+2025-12-10 13:50:57 | INFO | ResultsManager | --------------------------
+2025-12-10 13:50:57 | INFO | TrainingPipeline | → Saved visualization: outputs/visualize_images/XGBRegressor_linechart_200_samples_1_tuning.png
+2025-12-10 13:50:58 | INFO | TrainingPipeline | → Saved residuals plot: outputs/visualize_images/XGBRegressor_residuals_1.png
+2025-12-10 13:50:58 | INFO | ResultsManager | Đã lưu mô hình .pkl tại: outputs/models/006_XGBRegressor_1_tuner.pkl
+2025-12-10 13:50:58 | INFO | TrainingPipeline | → Saved model to      : outputs/models/006_XGBRegressor_1_tuner.pkl
+2025-12-10 13:50:58 | INFO | ResultsManager | Đã lưu kết quả thí nghiệm vào outputs/metrics/experiment_log.csv
+2025-12-10 13:50:58 | INFO | TrainingPipeline | 
+===== PIPELINE COMPLETED SUCCESSFULLY =====
+
+2025-12-10 13:50:58 | INFO | root | ========== HOÀN TẤT TRAINING PIPELINE ==========
+
