@@ -1,8 +1,14 @@
 # Dự đoán Giá Xe Cũ bằng Machine Learning  
 Đồ án Cuối kỳ – Machine Learning / Data Science
 
----
 
+## Nhóm 14 
+| Họ tên | MSSV |
+|--------|------|
+| Nguyễn Thị Huyền Trang | 23280092 |
+| Đặng Trọng Bảo Thi     |23280025 |
+| Lưu Vũ Lâm            | 23280067 |
+---
 ## 1. Giới thiệu Dự án
 
 **Mô tả:**  
@@ -17,17 +23,11 @@ Pipeline bao gồm:
 - Lưu mô hình và log toàn bộ quá trình
 
 **Dataset sử dụng:**  
-[DATASET](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho)
+[DATASET](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data/data?fbclid=IwY2xjawOnrwNleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeQwBbAj4Poh5uexVolTpguD-KCdhvh0KPu_kqH4lUDqcywzBPTyGtVgsX7Fc_aem_M8xdDIrOTkasNR49_Aim6w)
 
 ---
 
-## Thành viên nhóm
-| Họ tên | MSSV |
-|--------|------|
-| Nguyễn Thị Huyền Trang | 23280092 |
-| Đặng Trọng Bảo Thi     |
-|
----
+
 
 
 # 2. Cấu trúc Thư mục
@@ -99,7 +99,7 @@ pip install -r requirements.txt
 
 ## Tải Dataset và chuẩn bị thư mục
 
-Data xem tại [DATASET](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho)
+Data xem tại [DATASET](https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data/data?fbclid=IwY2xjawOnrwNleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeQwBbAj4Poh5uexVolTpguD-KCdhvh0KPu_kqH4lUDqcywzBPTyGtVgsX7Fc_aem_M8xdDIrOTkasNR49_Aim6w)
 
 
 **Tạo thư mục data/ trong project**
