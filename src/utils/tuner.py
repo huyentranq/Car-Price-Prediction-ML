@@ -27,7 +27,7 @@ class HyperparamTuner:
         self.param_grid = param_grid
         self.seed = seed
         self.gpu = gpu
-        # Sử dụng ModelFactory để tạo model cơ sở (Decoupling)
+        # Sử dụng ModelFactory để tạo model cơ sở 
         self.model = ModelFactory.create_model(model_name, gpu, seed) 
         logger.info(f"Đã khởi tạo Base Model: {self.model_name}")
 

@@ -10,7 +10,7 @@ from sklearn.preprocessing import (StandardScaler, MinMaxScaler, RobustScaler, F
 from sklearn.model_selection import train_test_split
 from src.utils.data_config import PreprocessConfig
  
-# from data_config import *
+
 class RowCleaner(BaseEstimator, TransformerMixin):
     """
     Stateless transformers before train-test split.

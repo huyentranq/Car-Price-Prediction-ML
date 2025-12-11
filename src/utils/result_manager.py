@@ -1,4 +1,3 @@
-# src/results_manager.py
 import pandas as pd
 import numpy as np
 import logging
@@ -70,7 +69,7 @@ class ModelEvaluator:
         plt.plot(x_axis, y_true_sample, label="Y True", linewidth=2)
         plt.plot(x_axis, y_pred_sample, label="Y Pred", linewidth=2, linestyle='--')
 
-        plt.title(f"{model_name} – Line Chart (First {n} Samples)")
+        plt.title(f"{model_name}  Line Chart (First {n} Samples)")
         plt.xlabel("Sample Index")
         plt.ylabel("Value")
         plt.legend()
@@ -149,7 +148,7 @@ class ModelEvaluator:
 
             return save_path
 
-# === PHƯƠNG THỨC : VISUALIZE FEATURE IMPORTANCE ===
+#PHƯƠNG THỨC : VISUALIZE FEATURE IMPORTANCE 
     def visualize_feature_importance(self, model: BaseEstimator, model_name: str, is_tuned: bool, top_n: int = 15) -> str:
         """
         Trích xuất và vẽ biểu đồ Feature Importance ('gain') cho mô hình XGBoost.
@@ -165,20 +164,17 @@ class ModelEvaluator:
         # 2. Trích xuất Feature Importance
         booster = model.get_booster()
         
-        # Lấy Importance theo 'gain' (Độ giảm mất mát trung bình mà feature đóng góp)
         f_importance = booster.get_score(importance_type='gain')
         
         if not f_importance:
              logger.warning("Không có Feature Importance nào được tính toán. (Có thể do mô hình base không được huấn luyện).")
              return ""
-        
-        # 3. Chuẩn bị dữ liệu và sắp xếp
+
         df_importance = pd.DataFrame(
             list(f_importance.items()), 
             columns=['Feature', 'Importance']
         ).sort_values(by='Importance', ascending=False)
 
-        # Lấy Top N
         df_top_n = df_importance.head(top_n)
 
         # 4. Vẽ biểu đồ
@@ -211,6 +207,7 @@ class ModelEvaluator:
 
         logger.info(f"Đã lưu biểu đồ Feature Importance tại: {save_path}")
         return save_path
+    
 # ============================================================================
 # CLASS 2: ModelPersister
 

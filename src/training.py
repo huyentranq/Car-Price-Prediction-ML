@@ -110,7 +110,7 @@ class TrainingPipeline:
             model=self.best_model,
             model_name=model_name,
             is_tuned=self.is_tuned,
-            top_n=15 # Chỉ hiển thị Top 10 feature (có thể tùy chỉnh)
+            top_n=15 # Chỉ hiển thị Top 15 feature (có thể tùy chỉnh)
         )
         if visualize_path_fi:
             logger.info(f"→ Saved Feature Importance: {visualize_path_fi}")
@@ -127,7 +127,7 @@ class TrainingPipeline:
             self.best_model, 
             save_dir=self.run_config['savedir_models']
         )
-        logger.info(f"→ Saved model to      : {model_save_path}")
+        logger.info(f"→ Saved model to : {model_save_path}")
 
         #  Lưu Metrics
         persister.save_results(
