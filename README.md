@@ -129,16 +129,16 @@ bash run_scripts/data_processing.sh
 ## 4.2. Train mô hình
 **Chạy lần lượt từng thí nghiệm sau (không chạy đồng thời)**
 ```bash
-
-# Train Linear Regression:
+# Train Linear Regression (Có Tuning & không Tuning):
 bash run_scripts/run_model_LinearRegression.sh
-
-# Train LGBM:
+```
+```bash
+# Train LGBM (Có Tuning & không Tuning):
 bash run_scripts/run_model_LGBMRegressor.sh
-
-# Train XGBRegressor Regression
+```
+```bash
+# Train XGBRegressor (Có Tuning & không Tuning)
 bash run_scripts/run_model_XGBRegressor.sh
-
 ```
 
 ### Script CLI tùy chỉnh
