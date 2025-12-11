@@ -128,6 +128,9 @@ bash run_scripts/data_processing.sh
 **Output**: folder **Data_processed** chứa data đã qua xử lý
 ## 4.2. Train mô hình
 **Chạy lần lượt từng thí nghiệm sau (không chạy đồng thời)**
+
+**Lưu ý**: **Chạy tuning (--tuner 1) sẽ mất thời gian 30 phút**
+
 ```bash
 # Train Linear Regression (Có Tuning & không Tuning):
 bash run_scripts/run_model_LinearRegression.sh
@@ -146,6 +149,8 @@ bash run_scripts/run_model_XGBRegressor.sh
 
 Ví dụ dưới đây là **kịch bản chạy XGBRegressor không tuning**
 
+
+**Lưu ý**: **Chạy tuning (--tuner 1) sẽ mất thời gian 30 phút**
 ```bash
 # --- KỊCH BẢN: XGBRegressor - Không Tuning ---
 # Có thể tùy chỉnh tham số để chạy nhiều lần thử nghiệm:
